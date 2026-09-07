@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* Clean, responsive personal-site header */
+:root {
+	--header-bg: #000000;
+	--header-text: #24d600;
+	--header-muted: #a0a0a0;
+	--header-accent: #2563eb;
+	--header-border: #444444;
+  --text: #333333;
+ font-family: "JetBrains Mono", monospace;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--header-bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+margin: 0;
+padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	background-color: var(--header-bg);
+	backdrop-filter: blur(14px);
+  text-align: center;
+  color: var(--header-text);
+  font-size: 2rem;
+}
+
+.site-header__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+	max-width: 1120px;
+	min-height: 72px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+.site-header__logo {
+	color: var(--header-text);
+	font-size: 1.125rem;
+	font-weight: 750;
+	letter-spacing: -0.03em;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+/* Conteneur principal de la nav */
+.navbar {
+  display: flex;
+  justify-content: center; /* Alignement à droite (ou center / space-between) */
+  padding: 0.5rem 2rem;
+  background-color: var(--header-border);
+  font-size: 1rem;
+}
+
+/* Alignement des li en ligne */
+.navbar-list {
+  display: flex;
+  list-style: none; /* Supprime les puces */
+  gap: 4rem;        /* Espace uniforme entre chaque lien */
+  margin: 0;
+  padding: 0;
+}
+
+/* Style des liens */
+.navbar-item a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar-item a:hover {
+  color: #3b82f6; /* Effet de survol */
+}
+
+
+
+@media (max-width: 640px) {
+	.site-header__inner {
+		min-height: 64px;
+		padding: 0 1rem;
+	}
+
+	.site-header__nav {
+		gap: 0.875rem;
+	}
+
+	.site-header__link {
+		font-size: 0.875rem;
+	}
+}

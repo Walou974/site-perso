@@ -1,29 +1,63 @@
+import { useEffect, useRef } from 'react';
 import Typewriter from 'typewriter-effect';
-import Navbar from './navbar.jsx'
+import Navbar from './navbar.jsx';
 
-function Header({ className }) {
-    return (
-        <header className={className}>
+function Header({ className, navbarSelectedSection, navbarOnSectionChange }) {
+  const headerRef = useRef(null);
 
-            <h1>Mael Albany</h1>
+  const roles = [
+  "Systems & Network Administrator",
+    "Virtualization & Network Security",
+  "Golden Rule: Always follow the 3-2-1 backup strategy.",
 
-    <Typewriter
+  "Linux & Windows Systems Admin",
+  "Automation with Bash & Python",
+  "Have you tried turning it off and on again?",
+
+  "Infrastructure & Operations Specialist",
+  "International IT Support & Monitoring",
+  "No printer can resist my troubleshooting skills.",
+
+];
+
+  useEffect(() => {
+    const updateHeaderHeight = () => {
+      if (headerRef.current) {
+        // Calcule la hauteur exacte (inclut le titre + Typewriter + Navbar)
+        const height = headerRef.current.offsetHeight;
+        document.documentElement.style.setProperty('--header-height', `${height}px`);
+      }
+    };
+
+    updateHeaderHeight(); // Calcul au chargement initial
+
+    // Observe les changements de taille du Header (redimensionnement écran, wrap de texte, etc.)
+    const resizeObserver = new ResizeObserver(updateHeaderHeight);
+    if (headerRef.current) {
+      resizeObserver.observe(headerRef.current);
+    }
+
+    return () => resizeObserver.disconnect();
+  }, []);
+
+  return (
+    <header ref={headerRef} className={className}>
+      <div className="header-content">
+      <h1>Mael Albany</h1>
+
+      <Typewriter
         options={{
-          strings: [
-            'npm run dev',
-            'Développeur React / Frontend',
-            'Créateur de sites web performants',
-            'Disponible pour des missions !'
-          ],
+          strings: roles,
           autoStart: true,
           loop: true,
           deleteSpeed: 30,
           delay: 75,
         }}
       />
-                  <Navbar />
-        
-        </header>
-    )
+      </div>
+      <Navbar selectedSection={navbarSelectedSection} onSelectSection={navbarOnSectionChange} />
+    </header>
+  );
 }
-export default Header
+
+export default Header;

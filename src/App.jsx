@@ -9,7 +9,6 @@ import Contact from './components/contacts.jsx'
 import Footer from './components/footer.jsx'
 
 function App() {
-  /* Make the body change regarding the navbar section clicked */
   const [activeSection, setActiveSection] = useState('home');
 
   return (

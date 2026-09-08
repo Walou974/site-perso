@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 :root {
-  /* Layout & Bases */
   --bg-main: #000000;
   --text-main: #888282;
   --text-primary: #ffffff;
@@ -9,35 +8,112 @@
   --text-secondary: #e5e7eb;
   --text-dimmed: #8b949e;
 
-  /* Accents & Highlights */
   --accent-color: #24d600;
-  --accent-rgb: 36, 214, 0; /* Utile pour les transparences rgba */
+  --accent-rgb: 36, 214, 0;
   --accent-hover: #3b82f6;
   --link-color: #2563eb;
 
-  /* Cartes & Containers */
   --card-bg: #0d1117;
   --card-border: #444444;
   --card-phantom-bg: #161b22;
   --card-phantom-border: #30363d;
   --card-phantom-back-border: #21262d;
 
-  /* Header & Navigation */
   --header-bg: #000000;
   --header-text: var(--accent-color);
   --header-border: #444444;
 
-  /* UI Elements (Boutons, Inputs, Badges) */
   --ui-bg-dark: #111827;
   --ui-bg-dark-hover: #1f2937;
   --input-bg: #161b22;
   --input-border: #30363d;
   --divider-color: #21262d;
 
+  color-scheme: dark;
   font-family: "JetBrains Mono", monospace;
 }
 
-/* Styles globaux */
+.theme-light {
+  --bg-main: #f8fafc;
+  --text-main: #475569;
+  --text-primary: #0f172a;
+  --text-muted: #64748b;
+  --text-secondary: #1e293b;
+  --text-dimmed: #64748b;
+
+  --accent-color: #d97706;
+  --accent-rgb: 217, 119, 6;
+  --accent-hover: #b45309;
+  --link-color: #2563eb;
+
+  --card-bg: #ffffff;
+  --card-border: #cbd5e1;
+  --card-phantom-bg: #f1f5f9;
+  --card-phantom-border: #e2e8f0;
+  --card-phantom-back-border: #cbd5e1;
+
+  --header-bg: #ffffff;
+  --header-text: var(--accent-color);
+  --header-border: #e2e8f0;
+
+  --ui-bg-dark: #f1f5f9;
+  --ui-bg-dark-hover: #e2e8f0;
+  --input-bg: #ffffff;
+  --input-border: #cbd5e1;
+  --divider-color: #e2e8f0;
+
+  color-scheme: light;
+}
+
+.theme-cyberpunk {
+  --bg-main: #0f051d;
+  --text-main: #a78bfa;
+  --text-primary: #00f0ff;
+  --text-muted: #ff007f;
+  --text-secondary: #f43f5e;
+  --text-dimmed: #c084fc;
+
+  --accent-color: #ffe600;
+  --accent-rgb: 255, 230, 0;
+  --accent-hover: #ff007f;
+  --link-color: #00f0ff;
+
+  --card-bg: #1a0933;
+  --card-border: #ff007f;
+  --card-phantom-bg: #2d0b5a;
+  --card-phantom-border: #00f0ff;
+  --card-phantom-back-border: #ffe600;
+
+  --header-bg: #0f051d;
+  --header-text: var(--accent-color);
+  --header-border: #ff007f;
+
+  --ui-bg-dark: #2d0b5a;
+  --ui-bg-dark-hover: #3b0764;
+  --input-bg: #1a0933;
+  --input-border: #ff007f;
+  --divider-color: #ff007f;
+
+  color-scheme: dark;
+}
+
+.theme-select {
+  background-color: var(--card-phantom-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.theme-select:hover {
+  border-color: var(--accent-color);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -58,7 +134,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-/* Header */
 .site-header {
   position: fixed;
   top: 0;
@@ -143,7 +218,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Structure principale */
 .site-body {
   flex: 1;
   padding: 2rem;
@@ -152,7 +226,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-main);
 }
 
-/* Carrousel & Cartes */
 .card-selector {
   display: flex;
   flex-direction: row;
@@ -251,8 +324,16 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--card-border);
+}
+
 .card-footer {
-  margin-top: 1rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -300,7 +381,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.08);
 }
 
-/* Home Section */
 .home-container {
   display: flex;
   flex-direction: column;
@@ -397,7 +477,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-2px);
 }
 
-/* About Section */
 .about-section {
   max-width: 800px;
   margin: 0 auto;
@@ -452,7 +531,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent-color);
 }
 
-/* Services Section */
 .services-section {
   max-width: 1000px;
   margin: 0 auto;
@@ -521,7 +599,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-dimmed);
 }
 
-/* Contact Section */
 .contact-section {
   max-width: 600px;
   margin: 0 auto;

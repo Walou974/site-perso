@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "tags": [
+            "JavaScript",
+            "React",
+            "Tailwind CSS",
+            "Portfolio"
+        ],
+        "title": "Interactive Terminal Portfolio",
+        "description": "Design and development of a modern terminal-style personal website to showcase infrastructure projects and technical skills. \n \n Built with React, modular CSS components, and structured JSON data handling for fast rendering and clean interface design.",
+        "gitLink": "https://github.com/Walou974/site-perso",
+        "liveDemoLink": ""
+    },
+    {
+        "id": 2,
+        "tags": [
+            "JavaScript",
+            "Productivity",
+            "Task Management",
+            "UI/UX"
+        ],
+        "title": "UnifiedKanban - Task Management App",
+        "description": "A centralized Kanban dashboard application designed to streamline workflows and organize personal or team tasks efficiently. \n \n Focuses on dynamic status tracking, intuitive user interface design, and state management for seamless productivity.",
+        "gitLink": "https://github.com/Walou974/UnifiedKanban",
+        "liveDemoLink": ""
+    },
+    {
+        "id": 3,
+        "tags": [
+            "Docker",
+            "Docker Compose",
+            "Web Scraping",
+            "Containerization",
+            "ReactJS"
+        ],
+        "title": "LecturesDuJour - Automated Gospel Reader Service",
+        "description": "An automated web service engineered to aggregate and parse daily Gospel texts into an optimized reader interface. \n \n Containerized end-to-end using Docker and Docker Compose as a modern alternative to traditional systemd services, demonstrating container management and web scraping skills.",
+        "gitLink": "https://github.com/Walou974/LecturesDuJour",
+        "liveDemoLink": "https://lectures-du-jour.vercel.app/"
+    }
+]

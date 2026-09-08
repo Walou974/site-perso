@@ -1,12 +1,9 @@
 import Card from './card.jsx';
 import { useState } from 'react';
+import projectData from '../data/projects.json';
 
 function Projects() {
-    const cards = [
-        { id: 1, tags: ["tag1", "tag2"], title: "test 1", description: "This is the first card. \n \n lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-        { id: 2, tags: ["tag3"], title: "Card 2", description: "This is the second card. \n \n lorem ipsum dolor sit amet, consectetur adipiscing elit.", gitLink: "#", liveDemoLink: "#" },
-        { id: 3, tags: ["tag4", "tag5"], title: "Card 3", description: "This is the third card. \n \n \n lorem ipsum dolor sit amet, consectetur adipiscing elit.", gitLink: "#", liveDemoLink: "#" },
-    ];
+    const cards = projectData;
 
     const NbCards = cards.length;
 
@@ -35,7 +32,6 @@ function Projects() {
             </h2>
             <div className="card-selector">
                 <button onClick={goToPreviousCard} className="arrow-button">
-                    {/*<img src={leftArrow} alt="Previous" className="w-5 h-5 brightness-0 invert" />*/}
                     <svg className="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                     </svg>
@@ -48,7 +44,6 @@ function Projects() {
                     </div>
                 </div>
                 <button onClick={goToNextCard} className="arrow-button">
-                    {/*<img src={rightArrow} alt="Next" className="w-5 h-5 brightness-0 invert" />*/}
                     <svg className="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                     </svg>

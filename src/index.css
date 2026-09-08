@@ -1,31 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-/* Clean, responsive personal-site header */
 :root {
-	--header-bg: #000000;
-	--header-text: #24d600;
-	--header-muted: #a0a0a0;
-	--header-accent: #2563eb;
-	--header-border: #444444;
-	--text: #888282;
-	--card-bg: #121418;
-	--card-border: #444444;
-	font-family: "JetBrains Mono", monospace;
+  --header-bg: #000000;
+  --header-text: #24d600;
+  --header-muted: #a0a0a0;
+  --header-accent: #2563eb;
+  --header-border: #444444;
+  --text: #888282;
+  --card-bg: #121418;
+  --card-border: #444444;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .app-container {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	background-color: var(--header-bg);
-	color: var(--text);
-	margin: 0;
-	padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--header-bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -34,12 +33,12 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .site-header {
-  position: fixed; /* Header stays pinned to the top */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -61,82 +60,75 @@ h6 {
 }
 
 .site-header__inner {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 2rem;
-	max-width: 1120px;
-	min-height: 72px;
-	margin: 0 auto;
-	padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1120px;
+  min-height: 72px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .site-header__logo {
-	color: var(--header-text);
-	font-size: 1.125rem;
-	font-weight: 750;
-	letter-spacing: -0.03em;
-	text-decoration: none;
-	white-space: nowrap;
+  color: var(--header-text);
+  font-size: 1.125rem;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-/* Conteneur principal de la nav */
 .navbar {
-	display: flex;
-	justify-content: center;
-	/* Alignement à droite (ou center / space-between) */
-	padding: 0.5rem 2rem;
-	background-color: var(--header-border);
-	font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 2rem;
+  background-color: var(--header-border);
+  font-size: 1rem;
 }
 
-/* Alignement des li en ligne */
 .navbar-list {
-	display: flex;
-	list-style: none;
-	/* Supprime les puces */
-	gap: 4rem;
-	/* Espace uniforme entre chaque lien */
-	margin: 0;
-	padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 4rem;
+  margin: 0;
+  padding: 0;
 }
 
-/* Style des liens */
 .navbar-item a {
-	text-decoration: none;
-	color: inherit;
-	font-weight: 500;
-	transition: color 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .navbar-item a:hover {
-	color: #3b82f6;
-	/* Effet de survol */
+  color: #3b82f6;
 }
 
 
 
 @media (max-width: 640px) {
-	.site-header__inner {
-		min-height: 64px;
-		padding: 0 1rem;
-	}
+  .site-header__inner {
+    min-height: 64px;
+    padding: 0 1rem;
+  }
 
-	.site-header__nav {
-		gap: 0.875rem;
-	}
+  .site-header__nav {
+    gap: 0.875rem;
+  }
 
-	.site-header__link {
-		font-size: 0.875rem;
-	}
+  .site-header__link {
+    font-size: 0.875rem;
+  }
 }
 
 .site-body {
-	flex: 1;
-	padding: 2rem;
-	max-width: 1120px;
-	margin: var(--header-height); /* Push content right under header */
-	color: var(--text);
+  flex: 1;
+  padding: 2rem;
+  max-width: 1120px;
+  margin: var(--header-height);
+  color: var(--text);
 }
 
 
@@ -144,10 +136,10 @@ h6 {
   flex: 1;
   padding: 2rem;
   max-width: 1120px;
-  margin: var(--header-height) auto 0 auto; /* Push content right under header */
+  margin: var(--header-height) auto 0 auto;
   color: var(--text);
 }
-/* Alignement du carrousel */
+
 .card-selector {
   display: flex;
   flex-direction: row;
@@ -157,15 +149,15 @@ h6 {
   margin-top: 2rem;
 }
 
-/* Conteneur principal avec hauteur min adaptative */
 .card-stack {
   position: relative;
   width: 500px;
-  min-height: 220px; /* S'agrandit si le contenu dépasse */
+  min-height: 220px;
   flex-shrink: 0;
 }
 
-.main-card, .phantomcard {
+.main-card,
+.phantomcard {
   position: absolute;
   top: 0;
   left: 0;
@@ -180,7 +172,6 @@ h6 {
   width: 100%;
 }
 
-/* Style de la carte active */
 .card-content {
   width: 100%;
   padding: 1.25rem;
@@ -192,7 +183,6 @@ h6 {
   flex-direction: column;
 }
 
-/* Badges de tags */
 .card-tags {
   display: flex;
   gap: 0.5rem;
@@ -222,12 +212,11 @@ h6 {
   font-size: 0.875rem;
   line-height: 1.5;
   white-space: pre-line;
-  word-break: break-word; /* Évite qu'un mot trop long ne casse le layout */
+  word-break: break-word;
   margin: 0;
   flex-grow: 1;
 }
 
-/* Zone des liens */
 .card-links {
   margin-top: 1.5rem;
   display: flex;
@@ -256,7 +245,6 @@ h6 {
   align-items: center;
 }
 
-/* Cartes en arrière-plan */
 .phantomcard {
   background-color: #161b22;
   pointer-events: none;
@@ -277,7 +265,6 @@ h6 {
   border: 1px solid #21262d;
 }
 
-/* Boutons de navigation */
 .arrow-button {
   background-color: #161b22;
   border: 1px solid var(--header-border, #30363d);
@@ -300,7 +287,6 @@ h6 {
   transform: scale(1.08);
 }
 
-/* Home page styles */
 .home-container {
   display: flex;
   flex-direction: column;
@@ -359,7 +345,6 @@ h6 {
   margin-bottom: 2rem;
 }
 
-/* Boutons */
 .hero-buttons {
   display: flex;
   gap: 1rem;
@@ -398,7 +383,6 @@ h6 {
   transform: translateY(-2px);
 }
 
-/* Section About */
 .about-section {
   max-width: 800px;
   margin: 0 auto;
@@ -430,7 +414,6 @@ h6 {
   color: #ffffff !important;
 }
 
-/* Grille de compétences style terminal */
 .skills-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -454,7 +437,6 @@ h6 {
   color: var(--header-text, #2ea44f);
 }
 
-/* Section Services */
 .services-section {
   max-width: 1000px;
   margin: 0 auto;
@@ -523,7 +505,6 @@ h6 {
   color: var(--header-muted, #8b949e);
 }
 
-/* Section Contact */
 .contact-section {
   max-width: 600px;
   margin: 0 auto;
@@ -599,7 +580,6 @@ h6 {
   font-size: 0.9rem;
 }
 
-/* Liens sociaux en bas de carte */
 .contact-socials {
   margin-top: 1.5rem;
   padding-top: 1rem;

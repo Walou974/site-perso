@@ -1,8 +1,10 @@
-# Portfolio Website — Maël Albany
+# Portfolio Website — Mael Albany
 
 [![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite)](https://vitejs.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+![Home Page](./docs/SitePersoMainPage.png)
 
 A personal portfolio website built with React and Vite, showcasing my projects, services, skills, and contact information.
 

@@ -1,16 +1,57 @@
-# React + Vite
+# Portfolio Website — Maël Albany
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+[![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite)](https://vitejs.dev/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Currently, two official plugins are available:
+A personal portfolio website built with React and Vite, showcasing my projects, services, skills, and contact information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[🌐 Live Demo](Lien deployé) 
 
-## React Compiler
+## Description
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This portfolio is designed to present my work and professional profile in a clean, modern, terminal-inspired responsive single-page application. It includes:
 
-## Expanding the Oxlint configuration
+- **Interactive Hero Section** with typing effect (`typewriter-effect`)
+- **Services Overview** listing key competencies
+- **Projects Gallery** with dynamic card stacks and JSON data
+- **About Section** detailing background and tech stack
+- **Contact Form** with direct social links
+- **Multi-Theme Switcher** (Dark, Light, Cyberpunk) with `localStorage` persistence
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Technologies Used
+
+- **Frontend:** React, JavaScript (ES6+), CSS3
+- **Build Tool:** Vite
+- **Data:** JSON for project details
+- **Design System:** CSS Custom Properties (Variables) with dynamic theme support
+
+## Project Structure
+
+```text
+site-perso/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/
+│   │   ├── about.jsx
+│   │   ├── card.jsx
+│   │   ├── contacts.jsx
+│   │   ├── footer.jsx
+│   │   ├── header.jsx
+│   │   ├── home.jsx
+│   │   ├── navbar.jsx
+│   │   ├── projects.jsx
+│   │   ├── services.jsx
+│   │   └── themeSwitcher.jsx
+│   ├── data/
+│   │   └── projects.json
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── package.json
+├── vite.config.js
+├── .gitignore
+├── index.html
+└── README.md

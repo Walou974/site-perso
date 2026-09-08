@@ -1,17 +1,51 @@
 import { useState } from 'react'
 import './App.css'
 import Header from './components/header.jsx'
+import Projects from './components/projects.jsx'
+import Home from './components/home.jsx'
+import About from './components/about.jsx'
+import Services from './components/services.jsx'
+import Contact from './components/contacts.jsx'
+import Footer from './components/footer.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  /* Make the body change regarding the navbar section clicked */
+  const [activeSection, setActiveSection] = useState('home');
 
   return (
     <div className="app-container">
-      <Header className="site-header" />
+      <Header className="site-header" navbarSelectedSection={activeSection} navbarOnSectionChange={setActiveSection} />
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+      {activeSection === 'home' && (
+        <div className="site-body">
+          <Home clickedButton={setActiveSection} />
+        </div>
+      )}
 
-      </div>
+      {activeSection === 'projects' && (
+          <Projects />
+
+      )}
+
+      {activeSection === 'about' && (
+        <div className="site-body">
+          <About />
+        </div>
+      )}
+
+      {activeSection === 'services' && (
+        <div className="site-body">
+          <Services />
+        </div>
+      )}
+
+      {activeSection === 'contact' && (
+        <div className="site-body">
+          <Contact />
+        </div>
+      )}
+      <Footer />
+    </div>
   )
 }
 
